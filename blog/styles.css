@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Rubik:ital@0;1&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #371333;
+}
+
+.navbar {
+    width: 12.5rem;
+    height: 100vh;
+    background-color: #140B0F;
+    color: #fff;
+    padding-top: 1.25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: 100%; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0.9375rem 0;
+    padding: 0 1.25rem;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+.navbar-links img {
+    width: 1.563rem;
+    height: auto;
+    margin: 0 0.5rem;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    font-size: 1.875rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.625rem;
+    position: relative;
+    margin-left: 0.625rem;
+}
+
+.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
+    display: block;
+    background-color: white;
+    height: 0.125rem;
+    width: 1.5625rem;
+    border-radius: 3rem;
+    position: relative;
+    margin-bottom: 0.3125rem;
+}
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+    width: 1.5625rem;
+}
+
+.nav-toggle-label span::before {
+    top: -0.5rem;
+}
+
+.nav-toggle-label span::after {
+    top: 0.5rem;
+}
+
+.nav-toggle:checked ~ .navbar-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.header-image {
+    flex: 2;
+    background-image: url('assets/header.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+.header-content {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #140B0F;
+    height: 100%;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #F3F4F4;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.header h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #C32957;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.main-content {
+    margin-left: 12.5rem;
+    padding: 1.25rem;
+    flex-grow: 1;
+}
+
+section {
+    padding: 2.5rem 1.25rem;
+    margin: 1rem 0;
+}
+
+.container {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+}
+
+.heading {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-bottom: 1.25rem;
+    font-size: 2em;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #F3F4F4;
+
+}
+
+#blog-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p[class="heading"] {
+    border: 3px solid #C32957;
+    background-color: #C32957;
+}
+
+p[class="blog-title"] {
+    font-weight: 700;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+p[class="blog-date"] {
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+#blog-content {
+    margin: 1.875rem;
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+    text-align: left;
+    font-family: "Cardo", serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-style: normal;
+    border: 30px solid #EBE0D0;
+    border-radius: 3rem;
+    background-color: #EBE0D0;
+    color: #140B0F;
+}
+
+.travel-album {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.travel-photos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #EBE0D0;
+    border-radius: 12%;
+    background-color: #EBE0D0;
+    padding: 1.5rem;
+}
+
+.travel-album img {
+    width: 100%;
+    height: auto;
+    max-width: 18.75rem; 
+    border-radius: 12%;
+}
+
+.travel-caption {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #C32957;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem 0;
+    background-color: #371333;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        margin: 1rem;
+    }
+
+    .travel-album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #blog-content {
+        margin: 1rem;
+        width: 32rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links li {
+        margin: 0.625rem 0;
+    }
+
+    .navbar-links a {
+        font-size: 1.125rem;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 1.25rem;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-image {
+        flex: none;
+        height: 30vh;
+        width: 100%;
+    }
+
+    .header-content {
+        flex: none;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .header h1 {
+        font-size: 5rem;
+    }
+
+    .header h2 {
+        font-size: 4rem;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .heading {
+        font-size: 3rem;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    #blog-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #blog-content {
+        width: 100%;
+        margin: 10px 0 0;
+        padding: 5px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .travel-album {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-photos img {
+        max-width: 100%;
+    }
+
+    .travel-caption {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .header-content {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .travel-album {
+        grid-template-columns: 1fr;
+    }
+
+    .travel-photos {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .travel-album img {
+        max-width: 100%;
+    }
+
+    .travel-caption {
+        font-size: 1rem;
+    }
+
+    #blog-content {
+        width: 100%;
+        margin: 10px 0 0;
+        padding: 5px;
+        text-align: center;
+        font-size: 1rem;
+    }
+}

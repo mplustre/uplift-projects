@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tammy Lustre Full-Stack Web Developer">
+  <title>Tammy Lustre Web Dev Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <ul class="navbar-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="blog/index.html" target="_blank">BLOG</a></li>
+        <li>
+            <a href="https://gitlab.com/mplustre" target="_blank">
+                <img src="assets/gitlab.png" alt="gitlab logo">
+            </a> 
+            <a href="https://www.linkedin.com/in/mikaella-lustre-a0245b201" target="_blank">
+                <img src="assets/linkedin.png" alt="linkedin logo">
+            </a>
+            <a href="mailto:mikaella.patria@gmail.com" target="_blank">
+                <img src="assets/envelope.png" alt="email icon">
+            </a>
+        </li>
+    </ul>
+  </nav>
+  <main class="main-content">
+    <header class="header">
+        <div class="header-image"></div>
+        <div class="header-content">
+            <h1>TAMMY LUSTRE</h1>
+            <h2>WEB DEVELOPER</h2>
+        </div>
+    </header>
+    <section class="container" id="about">
+        <div class="heading-container"><p class="heading">about me!</p></div>
+        <div id="about-me">
+            <div><img src="assets/tammy.png" alt="photo of tammy lustre" id="about-me-photo"></div>
+            <div id="about-me-desc">
+                <p>hello! i'm mikaella lustre, but you can call me tammy. i'm currently a student at uplift bootcamp because i aspire to be a full-stack web developer.<br />
+                    i spent a couple years learning french for my degree and now, i'm excited to learn programming languages. maybe someday i'll combine the two!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div id="resume-skills">
+            <div id="resume">
+                <div class="heading-container">
+                    <p class="heading">resume</p>
+                </div>
+                <a href="assets/resume.pdf" target="_blank" id="view-here" class="button">view here</a>
+            </div>
+            <div id="skills">
+                <div class="heading-container">
+                    <p class="heading">skills</p>
+                </div>
+                <div id="skills-logos">    
+                    <div>
+                        <div><img src="assets/html-5.png" alt= "html 5 logo" class="img-skills"></div>
+                        <div class="skills-name">HTML</div>
+                    </div>
+                    <div>
+                        <div><img src="assets/css-3.png" alt= "css 3 logo" class="img-skills"></div>
+                        <div class="skills-name">CSS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section class="container" id="projects">
+        <div class="heading-container">
+            <p class="heading">projects</p>
+        </div>
+        <div class="project-row">
+            <div class="project-row-items">  
+                <img src="assets/blog.png" alt="blogging platform thumbnail">
+                <p class="project-title">BLOGGING PLATFORM</p>
+                <p class="project-desc">a blogging platform with user registration, content creation, and comment sections. implemented using HTML, CSS, JavaScript, and Node.js.</p>
+            </div>
+            <div class="project-row-items">  
+                <img src="assets/ecommerce.png" alt="e-commerce platform thumbnail">
+                <p class="project-title">E-COMMERCE PLATFORM</p>
+                <p class="project-desc">an e-commerce platform featuring product listings, a shopping cart, and user authentication. developed using the MERN stack.</p>
+            </div>            
+            <div class="project-row-items">  
+                <img src="assets/tasks.png" alt="task manager thumbnail">
+                <p class="project-title">TASK MANAGER</p>
+                <p class="project-desc">a task management app to organize and track tasks with user authentication. developed using HTML, CSS, JavaScript, and MongoDB.</p>
+            </div>
+            <div class="project-row-items">  
+                <img src="assets/weather.png" alt="weather app thumbnail">
+                <p class="project-title">WEATHER APP</p>
+                <p class="project-desc">a weather app that displays current weather and forecasts based on user location. built with HTML, CSS, JavaScript, and a weather API.</p>
+            </div>            
+            <div class="project-row-items">  
+                <img src="assets/expense.png" alt="expense tracker thumbnail">
+                <p class="project-title">EXPENSE TRACKER</p>
+                <p class="project-desc">an expense tracker app to manage and track personal finances. developed using the MERN stack.</p>
+            </div>            
+            <div class="project-row-items">  
+                <img src="assets/wellness.png" alt="wellness tracker thumbnail">
+                <p class="project-title">WELLNESS TRACKER</p>
+                <p class="project-desc">a wellness tracker app to log healthy activities and track progress. built with HTML, CSS, JavaScript, and MongoDB.</p>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="contact">
+        <div class="heading-container">
+            <p class="heading">hit me up!</p>
+        </div>
+        <div id="contact-group">    
+            <form action="mailto:mikaella.patria@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required autocomplete="email" />
+                </div>            
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="5" cols = "50" name="message" autocomplete="off" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" id="submit" value="SUBMIT" />
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Tammy Lustre, Bailey, and Sasha</p>
+    </footer>
+  </main>
+</body>
+</html>
