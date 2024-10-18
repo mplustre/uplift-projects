@@ -2,12 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Rubik:ital@0;1&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
     font-size: 16px;
@@ -21,100 +15,90 @@ body {
     background-color: #371333;
 }
 
-.navbar {
-    width: 12.5rem;
-    height: 100vh;
-    background-color: #140B0F;
-    color: #fff;
-    padding-top: 1.25rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.navbar-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start; 
-    height: 100%; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar-links li {
-    margin: 0.9375rem 0;
-    padding: 0 1.25rem;
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-}
-
-.navbar-links a:hover {
-    text-decoration: underline;
-}
-
-.navbar-links img {
-    width: 1.563rem;
-    height: auto;
-    margin: 0 0.5rem;
-}
-
-.nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    display: none;
-    font-size: 1.875rem;
-    color: white;
+/* NAVBAR */
+nav {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Hamburger Menu for Mobile */
+  #hamburger {
+    font-size: 30px;
     cursor: pointer;
-    padding: 0.625rem;
-    position: relative;
-    margin-left: 0.625rem;
-}
-
-.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
-    display: block;
-    background-color: white;
-    height: 0.125rem;
-    width: 1.5625rem;
-    border-radius: 3rem;
-    position: relative;
-    margin-bottom: 0.3125rem;
-}
-
-.nav-toggle-label span::before, .nav-toggle-label span::after {
-    content: '';
+    padding: 20px;
     position: absolute;
-    width: 1.5625rem;
-}
+    right: 0;
+    top: 0;
+  }
+  
+  #nav-menu {
+    display: none; /* Hidden initially */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 50px;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #nav-menu ul li {
+    margin: 20px 0;
+  }
+  
+  #nav-menu ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Open the menu */
+  #nav-menu.open {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    #hamburger {
+      display: none; /* Hide hamburger on larger screens */
+    }
+  
+    #nav-menu {
+      position: static;
+      display: block;
+      height: auto;
+      width: 100%;
+      background-color: transparent;
+      transform: none;
+      transition: none;
+    }
+  
+    #nav-menu ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      margin: 0;
+      background-color: transparent;
+    }
+  
+    #nav-menu ul li a {
+      color: black; /* Change color for desktop */
+      font-size: 1.2rem;
+    }
+  }
 
-.nav-toggle-label span::before {
-    top: -0.5rem;
-}
-
-.nav-toggle-label span::after {
-    top: 0.5rem;
-}
-
-.nav-toggle:checked ~ .navbar-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* HEADER */
 
 .header {
     display: flex;
@@ -220,8 +204,8 @@ p[class="heading"] {
 
 #about-me-desc {
     margin: 1.875rem;
-    width: 25rem;
-    padding: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
     height: auto;
     text-align: left;
     font-family: "Cardo", serif;
@@ -312,18 +296,16 @@ p[class="heading"] {
     border: 3px solid #EBE0D0;
     border-radius: 5%;
     background-color: #EBE0D0;
-    padding: 2rem;
+    padding: 2rem
 }
 
 .project-row img {
     width: 100%;
     height: auto;
     max-width: 18.75rem; 
-    border-radius: 10%;
 }
 
 .project-title, .skills-name {
-    margin: 0.5rem;
     font-size: 1.2rem;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
@@ -363,12 +345,6 @@ p[class="heading"] {
     color: #EBE0D0;
 }
 
-#submit {
-    font-family: "Rubik", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
-
 label {
     margin-bottom: 0.3125rem;
     font-weight: bold;
@@ -406,302 +382,70 @@ footer {
 }
 
 @media (max-width: 1024px) {
-
-    .container {
-        margin: 1rem;
-    }
-
     .project-row {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    #about-me-photo {
-        margin: 1rem;
-        width: 20rem;
-        height: auto;
-        border-radius: 3rem;
-        border: 10px solid #EBE0D0;
-    }
-
-    #about-me-desc {
-        margin: 1rem;
-        width: 32rem;
-    }
-
-    #resume, #skills {
-        margin: 1rem;
-    }
-
 }
 
 @media (max-width: 768px) {
-
-    .navbar {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-links li {
-        margin: 0.625rem 0;
-    }
-
-    .navbar-links a {
-        font-size: 1.125rem;
-    }
-
-    .nav-toggle-label {
-        display: block;
-    }
-
-    .main-content {
-        margin-left: 0;
-        margin-top: 1.25rem;
-    }
-
-    .header {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .header-image {
-        flex: none;
-        height: 30vh;
-        width: 100%;
-    }
-
-    .header-content {
-        flex: none;
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .header-content {
-        width: 100%;
-        padding: 20px;
-        margin: 0;
-    }
-
-    .header h1 {
-        font-size: 5rem;
-    }
-
-    .header h2 {
-        font-size: 4rem;
-    }
-
-    .container {
-        padding: 10px;
-        margin: 10px 0;
-    }
-
-    .heading {
-        font-size: 3rem;
-        padding: 10px;
-        margin: 10px 0;
-    }
-
-    #about-me {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #about-me-photo {
-        align-items: center;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    #about-me-desc {
-        width: 100%;
-        margin: 10px 0 0;
-        padding: 5px;
-        text-align: center;
-        font-size: 2rem;
-    }
-
-    #resume-skills {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #resume, #skills {
-        width: 100%;
-        margin: 10px 0;
-        padding: 5%;
-    }
-
-    #view-here {
-        font-size: 2rem;
-    }
-
-    .project-row {
-        grid-template-columns: 1fr;
-    }
-
-    .project-row-items img {
-        max-width: 100%;
-    }
-
-    .project-title, .project-desc {
-        font-size: 2rem;
-    }
-
-    #contact-group {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .form-group {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    input[type="text"], input[type="email"], textarea {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    input[type="submit"] {
-        width: 25%;
-        padding: 10px;
-    }
+.navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
 }
 
-@media (max-width: 360px) {
+.navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .navbar {
-        width: 100%;
-        height: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
+.navbar-links li {
+    margin: 0.625rem 0;
+}
 
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
+.navbar-links a {
+    font-size: 1.125rem;
+}
 
-    .nav-toggle-label {
-        display: block;
-    }
+.nav-toggle-label {
+    display: block;
+}
 
-    .main-content {
-        margin-left: 0;
-        margin-top: 50px;
-        padding: 10px;
-    }
+.main-content {
+    margin-left: 0;
+    margin-top: 1.25rem;
+}
 
-    .header {
-        flex-direction: column;
-        height: auto;
-        text-align: center;
-    }
+.header {
+    flex-direction: column;
+    height: auto;
+}
 
-    .header-content {
-        width: 100%;
-        padding: 20px;
-        margin: 0;
-    }
+.header-image {
+    flex: none;
+    height: 30vh;
+    width: 100%;
+}
 
-    .header h1 {
-        font-size: 2rem;
-    }
+.header-content {
+    flex: none;
+    width: 100%;
+    padding: 1rem;
+}
 
-    .header h2 {
-        font-size: 1.2rem;
-    }
+#about-me, #resume-skills, #contact-group {
+    flex-direction: column;
+    align-items: center;
 
-    .container {
-        padding: 10px;
-        margin: 10px 0;
-    }
+}
 
-    .heading {
-        font-size: 1.5rem;
-        padding: 10px;
-        margin: 10px 0;
-    }
-    
-    #about-me {
-        flex-direction: column;
-        align-items: center;
-    }
+.project-row {
+    grid-template-columns: 1fr;
+}
 
-    #about-me-photo {
-        align-items: center;
-        width: 100%;
-        margin: 10px 0;
-    }
+.project-row-items img {
+    max-width: 100%;
+}
 
-    #about-me-desc {
-        width: 100%;
-        margin: 10px 0 0;
-        padding: 5px;
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    #resume-skills {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #resume, #skills {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    #view-here {
-        font-size: 1rem;
-    }
-
-    .project-row {
-        grid-template-columns: 1fr;
-    }
-
-    .project-row-items {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .project-row img {
-        max-width: 100%;
-    }
-
-    .project-title, .project-desc {
-        font-size: 1rem;
-    }
-
-    #contact-group {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .form-group {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    input[type="text"], input[type="email"], textarea {
-        width: 100%;
-        padding: 10px;
-    }
-
-    input[type="submit"] {
-        width: 25%;
-        padding: 10px;
-    }
 }
